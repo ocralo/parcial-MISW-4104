@@ -37,20 +37,20 @@ describe('HomeComponent', () => {
 	});
 
 	describe('getCoffeeVarieties', () => {
-		it('should be call setMuseums by service', () => {
-			const spySetMuseums = spyOn(component, 'setCoffeeVarieties');
+		it('should be call setCoffeeVarieties by service', () => {
+			const spySetCoffeeVarieties = spyOn(component, 'setCoffeeVarieties');
 			component.getCoffeeVarieties();
 			fixture.detectChanges();
-			expect(spySetMuseums).toHaveBeenCalled();
+			expect(spySetCoffeeVarieties).toHaveBeenCalled();
 		});
 	});
 
-	describe('setMuseums', () => {
-		it('should be change museums', () => {
-			const otherMuseum = [expectedCoffeeVarieties[0]];
-			component.setCoffeeVarieties(otherMuseum);
+	describe('setCoffeeVarieties', () => {
+		it('should be change coffeeVarieties', () => {
+			const otherCoffeeVarieties = [expectedCoffeeVarieties[0]];
+			component.setCoffeeVarieties(otherCoffeeVarieties);
 			fixture.detectChanges();
-			expect(component.coffeeVarieties).toEqual(otherMuseum);
+			expect(component.coffeeVarieties).toEqual(otherCoffeeVarieties);
 		});
 	});
 });
