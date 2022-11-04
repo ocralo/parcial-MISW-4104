@@ -18,8 +18,19 @@ export class HomeComponent implements OnInit {
 			.subscribe(this.setCoffeeVarieties.bind(this));
 	}
 
-	setCoffeeVarieties(museums: ICoffeeVarieties[]) {
-		this.coffeeVarieties = museums;
+	setCoffeeVarieties(coffeeVarieties: ICoffeeVarieties[]) {
+		this.coffeeVarieties = coffeeVarieties;
+	}
+
+	getTotalOriginCoffee() {
+		return this.coffeeVarieties.filter(({tipo}) =>
+			tipo.includes('Café de Origen')
+		).length;
+	}
+
+	getTotalBlendCoffee() {
+		return this.coffeeVarieties.filter(({tipo}) => tipo.includes('Blend'))
+			.length;
 	}
 
 	ngOnInit(): void {
