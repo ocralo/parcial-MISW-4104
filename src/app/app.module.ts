@@ -8,6 +8,7 @@ import {NavbarComponent} from './components/navbar/navbar.component';
 import {HeroImageComponent} from './components/hero-image/hero-image.component';
 import {FooterComponent} from './components/footer/footer.component';
 import {HttpClientModule} from '@angular/common/http';
+import {TableCoffeeVarietiesComponent} from './components/table-coffee-varieties/table-coffee-varieties.component';
 
 @NgModule({
 	declarations: [
@@ -16,6 +17,7 @@ import {HttpClientModule} from '@angular/common/http';
 		NavbarComponent,
 		HeroImageComponent,
 		FooterComponent,
+		TableCoffeeVarietiesComponent,
 	],
 	imports: [HttpClientModule, BrowserModule, AppRoutingModule],
 	providers: [],
