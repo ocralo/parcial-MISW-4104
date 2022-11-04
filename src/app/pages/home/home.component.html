@@ -2,10 +2,16 @@
 	<div class="border-top border-bottom py-4 px-0">
 		<app-hero-image></app-hero-image>
 	</div>
-	<div class="row mt-4">
+	<div class="row mt-4 mb-2">
 		<div class="col-12 col-lg-8">
 			<app-table-coffee-varieties
 				[coffeeVarieties]="coffeeVarieties"></app-table-coffee-varieties>
+		</div>
+	</div>
+	<div class="row mb-5">
+		<div class="col">
+			<p class="my-0">Total café de origen: <span>{{getTotalOriginCoffee()}}</span></p>
+			<p class="my-0">Total café blend: <span>{{getTotalBlendCoffee()}}</span></p>
 		</div>
 	</div>
 </div>
