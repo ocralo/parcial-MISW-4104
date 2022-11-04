@@ -1,0 +1,22 @@
+<div class="table-responsive">
+	<table class="table">
+		<thead class="table-dark">
+			<tr>
+				<th scope="col">#</th>
+				<th scope="col">Nombre</th>
+				<th scope="col">Tipo</th>
+				<th scope="col">Región</th>
+			</tr>
+		</thead>
+		<tbody class="body-list-coffee-varietie">
+			<tr class="list-coffee-varietie" *ngFor="let coffeeVarietie of coffeeVarieties">
+				<th scope="row">
+					<b>{{ coffeeVarietie.id }}</b>
+				</th>
+				<td>{{ coffeeVarietie.nombre }}</td>
+				<td>{{ coffeeVarietie.tipo }}</td>
+				<td>{{ coffeeVarietie.region }}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
