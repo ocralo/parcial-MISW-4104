@@ -45,6 +45,24 @@ describe('HomeComponent', () => {
 		});
 	});
 
+	describe('getTotalOriginCoffee', () => {
+		it('should be call getTotalOriginCoffee by service', () => {
+			const result: number = expectedCoffeeVarieties.filter(({tipo}) =>
+				tipo.includes('Café de Origen')
+			).length;
+			expect(component.getTotalOriginCoffee()).toBe(result);
+		});
+	});
+
+  describe('getTotalBlendCoffee', () => {
+		it('should be call getTotalBlendCoffee by service', () => {
+			const result: number = expectedCoffeeVarieties.filter(({tipo}) =>
+				tipo.includes('Blend')
+			).length;
+			expect(component.getTotalBlendCoffee()).toBe(result);
+		});
+	});
+
 	describe('setCoffeeVarieties', () => {
 		it('should be change coffeeVarieties', () => {
 			const otherCoffeeVarieties = [expectedCoffeeVarieties[0]];
