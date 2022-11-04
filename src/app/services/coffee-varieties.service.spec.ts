@@ -31,15 +31,15 @@ describe('CoffeeVarietiesService', () => {
 
 	describe('getCoffeeVarieties', () => {
 		it('should return an Observable<ICoffeeVarieties[]>', () => {
-			const expectedMuseums: ICoffeeVarieties[] = coffeeVarieties;
+			const expectedCoffeeVarieties: ICoffeeVarieties[] = coffeeVarieties;
 
 			service.getCoffeeVarieties().subscribe((coffeeVarieties) => {
-				expect(coffeeVarieties).toEqual(expectedMuseums);
+				expect(coffeeVarieties).toEqual(expectedCoffeeVarieties);
 			});
 
 			const req = httpMock.expectOne(service.apiUrl);
 			expect(req.request.method).toBe('GET');
-			req.flush(expectedMuseums);
+			req.flush(expectedCoffeeVarieties);
 		});
 	});
 });
