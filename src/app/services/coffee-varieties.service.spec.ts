@@ -29,8 +29,8 @@ describe('CoffeeVarietiesService', () => {
 		expect(service).toBeTruthy();
 	});
 
-	describe('getMuseums', () => {
-		it('should return an Observable<User[]>', () => {
+	describe('getCoffeeVarieties', () => {
+		it('should return an Observable<ICoffeeVarieties[]>', () => {
 			const expectedMuseums: ICoffeeVarieties[] = coffeeVarieties;
 
 			service.getCoffeeVarieties().subscribe((coffeeVarieties) => {
